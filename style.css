@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #3c3d37;
 }
 
 :root {
-  --t-main: #b91547;
-  --t-secondary: #757575;
-  --t-dark: #010101;
-  --t-light: #ffffff;
+  --t-main: #697565;
+  --t-secondary: #9ca986;
+  --t-dark: #1e201e;
+  --t-light: #fff7d1;
 }
 
 .debug {
