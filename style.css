@@ -15,7 +15,7 @@
   min-height: 100px;
   min-width: 100px;
   .card,
-  .ticket-card {
+  .ticket_card_container {
     min-height: 180px;
   }
 }
@@ -31,10 +31,28 @@ body {
 }
 
 .card,
-.ticket-card {
+.ticket_card_container {
   background-color: var(--t-light);
 }
 
-.card_container:nth-child(4) {
-  border-radius: 0px;
+label {
+  color: var(--t-main);
+  font-weight: 500;
+}
+
+button {
+  background-color: lightgray;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: solid 1px black;
+  color: var(--t-main);
+  font-weight: bold;
+}
+
+button:hover {
+  border-color: orange;
+}
+
+input {
+  border-color: red;
 }
