@@ -3,3 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --t-main: #b91547;
+  --t-secondary: #757575;
+  --t-dark: #010101;
+  --t-light: #ffffff;
+}
+
+.debug {
+  min-height: 100px;
+  min-width: 100px;
+  .card,
+  .ticket-card {
+    min-height: 180px;
+  }
+}
+
+h1 {
+  color: var(--t-light);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body {
+  background-color: var(--t-main);
+}
+
+.card,
+.ticket-card {
+  background-color: var(--t-light);
+}
+
+.card_container:nth-child(4) {
+  border-radius: 0px;
+}
