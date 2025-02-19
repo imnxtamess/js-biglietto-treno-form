@@ -71,3 +71,8 @@ h4,
 h5 {
   font-weight: 700;
 }
+
+.left_ticket,
+.right_ticket {
+  min-height: 100px;
+}
