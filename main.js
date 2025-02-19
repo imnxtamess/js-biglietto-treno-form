@@ -1,3 +1,20 @@
+// select the dom nodes
+const fullnameEl = document.getElementById("fullname")
+const kmEl = document.getElementById("km")
+const ageEl = document.getElementById("age")
+const ticketpriceEL = document.querySelector(".right_ticket>div:last-child")
+
+// save the form values
+
+const formEl = document.getElementById('ticket_form')
+
+formEl.addEventListener('submit', function (e) {
+  e.preventDefault()
+  console.log(ticket_pricing(kmEl.value, ageEl.value));
+  ticketpriceEL.innerText = (`${ticket_pricing(kmEl.value, ageEl.value)}€`) // prints the ticket pricing on the ticket card
+})
+
+
 // ticket pricing function
 
 function ticket_pricing(user_distance, user_age) {
@@ -15,33 +32,16 @@ function ticket_pricing(user_distance, user_age) {
 
   if (user_age == 1) {
     console.log((`Il prezzo del tuo biglietto è ${minor_price.toFixed(2)}€`));
-
+    return minor_price.toFixed(2)
   }
   else if (user_age == 2) {
     console.log((`Il prezzo del tuo biglietto è ${base_price}€`));
+    return base_price
   }
   else {
     console.log((`Il prezzo del tuo biglietto è ${over65_price.toFixed(2)}€`));
-
+    return over65_price.toFixed(2)
   }
+
 }
-
-
-// select the dom nodes
-const fullnameEl = document.getElementById("fullname")
-const kmEl = document.getElementById("km")
-const ageEl = document.getElementById("age")
-
-
-// save the form values
-
-const formEl = document.getElementById('ticket_form')
-
-formEl.addEventListener('submit', function (e) {
-  e.preventDefault()
-  ticket_pricing(kmEl.value, ageEl.value)
-  console.log(ageEl.value);
-
-})
-
 
