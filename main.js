@@ -2,7 +2,12 @@
 const fullnameEl = document.getElementById("fullname")
 const kmEl = document.getElementById("km")
 const ageEl = document.getElementById("age")
-const ticketpriceEL = document.querySelector(".right_ticket>div:last-child")
+
+const ticketpriceEl = document.querySelector(".right_ticket>div:last-child")
+const passengerNameEl = document.querySelector(".left_ticket>div:last-child")
+const offerEl = document.querySelector(".right_ticket>div:nth-child(5)")
+const carriageEl = document.querySelector(".right_ticket>div:nth-child(6)")
+const cpEl = document.querySelector(".right_ticket>div:nth-child(7)")
 
 // save the form values
 
@@ -11,8 +16,22 @@ const formEl = document.getElementById('ticket_form')
 formEl.addEventListener('submit', function (e) {
   e.preventDefault()
   console.log(ticket_pricing(kmEl.value, ageEl.value));
-  ticketpriceEL.innerText = (`${ticket_pricing(kmEl.value, ageEl.value)}€`) // prints the ticket pricing on the ticket card
+  ticketpriceEl.innerText = (`${ticket_pricing(kmEl.value, ageEl.value)}€`) // prints the ticket pricing on the ticket card
+  passengerNameEl.innerHTML = (`<h4>${fullnameEl.value}</h4>`) // prints the fullname input into the passenger name h4 element
+  if (ageEl.value == 1) {
+    offerEl.innerText = ("Ridotto")
+  }
+  else if (ageEl.value == 2) {
+    offerEl.innerText = ("Prezzo base")
+  }
+  else {
+    offerEl.innerText = ("Ridotto Senior")
+  }
+  // prints the offer based on the age of the passenger
+  carriageEl.innerText = Math.floor(Math.random() * 10) + 1 // prints a random number between 1 and 10 onto the carriage element
+  cpEl.innerText = Math.floor(Math.random() * 999) + 1000 // prints a random number between 1000 and 1999 onto the cpELement
 })
+
 
 
 // ticket pricing function
