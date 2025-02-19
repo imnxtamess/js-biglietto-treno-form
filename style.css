@@ -56,3 +56,18 @@ button:hover {
 input {
   border-color: red;
 }
+
+.left_ticket {
+  background-color: var(--t-secondary);
+}
+
+.right_ticket {
+  border-top: 1px solid var(--t-secondary);
+  border-bottom: 1px solid var(--t-secondary);
+  padding-left: 2rem;
+}
+
+h4,
+h5 {
+  font-weight: 700;
+}
